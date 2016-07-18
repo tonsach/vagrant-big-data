@@ -1,9 +1,11 @@
 class pig {
-
-  $pig = "pig-0.11.1"
+  
+  # check url
+  $pig = "pig-0.12.0"
+  $url = "http://archive.apache.org/dist/pig"
 
   exec { "download_pig":
-    command => "rm -f /tmp/${pig}.tar.gz && wget -O /tmp/${pig}.tar.gz http://apache.claz.org/pig/pig-0.11.1/${pig}.tar.gz",
+    command => "rm -f /tmp/${pig}.tar.gz && wget -O /tmp/${pig}.tar.gz ${url}/${pig}/${pig}.tar.gz",
     path => $path,
     timeout => 1800,
     logoutput => "on_failure",

@@ -1,6 +1,10 @@
 include hadoop
-include sqoop
+# delete sqoop
+#include sqoop
+
 include pig
+
+include hive
 
 group { "puppet":
   ensure => "present",
